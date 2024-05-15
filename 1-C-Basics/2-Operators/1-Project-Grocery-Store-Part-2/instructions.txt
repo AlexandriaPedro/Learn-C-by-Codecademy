@@ -1,0 +1,54 @@
+LEARN C
+Grocery Store Part 2
+We will start you with our solution to the previous project for our apple information for a grocery store. Our version might be slightly different than what you had. You might also notice a few changes that were not part of the previous project but we will be using these as part of this project. We will get to each of the changes in the appropriate tasks.
+
+We will be adding more information, applying sales, modifying the review score and more.
+
+Tasks
+7/7 complete
+Mark the tasks as complete by checking them off
+Logical Operators
+1.
+We want to offer a sale when we are running out of apples to help move the last few that everyone skipped over. There is an empty if statement setup in the code for you, since you have not learned about these formally yet we provided this part. Inside the parenthesis write your check to see if appleQuantity is less than 10.
+
+Mathmatical symbols
+2.
+The calculated review score you were given before was done incorrectly. This time you are going to calculate the review average yourself to make sure it’s correct. The total review score is 823 from 9 reviewers. Calculate the appleReview to be stored before you cast it into the appleReviewDisplay variable.
+
+To get the average take the total (823) divide that by the number of reviewers (9) and save that into appleReview.
+
+3.
+We want to see if certain days of the week impact our sales. Create a new int called dayOfWeek and set it to any value greater than or equal 0 (0 represents the first day of the week).
+
+4.
+Now that we have a variable to track the day of the week, try adding any number of days you want to the initial value later in the code. For preparation for a future task, make this adjustment before the if code block.
+
+5.
+The sales records show that the fourth day of the week (identified by 3) has lower sales of apples than any other day.
+
+Extend the appleQuantity check inside the if parentheses to see if it is the fourth day of the week. This should offer up the sale if either value is true.
+
+You will need to do two things to make this work. First, you would need to determine the day of the week, you do this with a modulo, like: dayOfWeek % 7. As an aside, this is why we started dayOfWeek to 0, so when there is no remainder divided by 7, ie 0, its a valid day of the week in our system, and 6, the highest possible remainder is the last day of the week.
+
+The other part is to put this code inside the if condition you modified before checking for quantity of apples, but now you want it to be true if apple quantity is low or (||) if the day of the week is the fourth (3). Remember, in C checking for equivalence is a double equals ==, a single one is used to set values.
+
+In the end your script should look like (note the order you have your checks here isn’t important):
+
+if(dayOfWeek % 7 == 3 || appleQuantity < 10)
+
+Order of Operations
+6.
+Another review came in, so your logic needs to be updated for the average review score. This customer was not a fan and gave your apples a 52. Modify the review score to take this new information into account (don’t forget to increase the number of reviewers in your division as well as the total score).
+
+If you write the update like this:
+
+appleReview = <old_total>+<new_review>/10;
+
+Your average score will become 828%… something is not right. Remember, order of operations, division will run before addition, so you need to put parenthesis around it like this:
+
+appleReview = (<old_total>+<new_review>)/10;
+
+Where <old_total> = 823 and <new_review> = 52
+
+7.
+You have now completed all tasks for this project! Run it now to make sure everything is working as expected, and we will see you in the next lesson to expand on your knowledge of C.
