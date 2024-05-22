@@ -1,0 +1,108 @@
+LEARN C
+Dates and Switches
+This is a classic coding project that utilizes switch statement logic to convert a given date into a familiar style displaying the month, day, and year all written out.
+
+It may be complicated to wrap your head around at first, but after considering some cases, it may not be so tricky after all.
+
+Want to give it a go?
+
+Write a program that takes any user input in the format mm/dd/yyyy and prints it out in the style “January 1st, 2021.” (derived in English from whatever input is given).
+
+For instance, input may look like:
+
+01/01/2021
+
+Which produces the following output:
+
+January 1st, 2021.
+
+Tasks
+9/9 complete
+Mark the tasks as complete by checking them off
+Printing the month:
+1.
+Let’s start with brainstorming how the switch statement may look for printing the month.
+
+We know the 1st month of the year is January and the 2nd month is February, so we can consider these inside a switch statement as case 1 and case 2. We can do this because the incoming variable for the month will be an integer between 1 and 12, each corresponding to a unique case.
+
+In this way, take a moment to consider how many cases we’ll need for this switch statement.
+
+2.
+Now that we have an idea of how many cases we’ll need, let’s start writing those out in a switch statement.
+
+Start writing the switch statement. Note that the variable the switch will be using is the month variable.
+
+Each case will print out the corresponding month in English (remember, don’t include a \n inside the print statement! We want to have everything print on a single line, and will add a \n to the final print statement in the program).
+
+3.
+Let’s test your switch statement.
+
+To compile and execute your program in the Terminal window, save your code and enter the following two commands:
+
+gcc date.c
+./a.out
+
+If there are errors in the terminal after running the first command, be sure to resolve the errors and recompile before trying to execute the program. Once you have executed the program, type and enter a date (note, this can be any date you want):
+
+01/01/2021
+
+Did you print January (or whatever custom month you chose)? If not, make sure your cases are corresponding to the correct months!
+
+Printing the day:
+4.
+Consider how you pronounce the days of the month. They each have a number ranging anywhere in the 1-31 range (at maximum), and each number has some kind of suffix when pronounced. For instance, we pronounce the first day of the month as the “1st”, the second as the “2nd”, and the third as the “3rd”.
+
+Take a second to brainstorm all the possible suffixes that exist across all days of the month. Write down the different suffixes you can think of, and try to find a pattern for which numbers they attach to.
+
+5.
+Keeping those suffixes in mind, let’s go ahead and print the numerical form of the day.
+
+Write a print statement that prints the day as an integer. Make sure to include a space in front of the number to ensure we have a space between the month from before and the printed day.
+
+6.
+Now, the hard part!
+
+We want to write a switch statement to handle all your suffix cases for any given day. Did you find any patterns between the numbers and their suffixes?
+
+For instance, days 1, 21, and 31 all end in a 1, and when pronounced all involve the suffix “st”. Similarly, days that end with a 2 (excluding 12) use “nd”.
+
+In order to simplify our switch statement here, we’re going to utilize a trick to combine multiple cases into one.
+
+For example:
+
+switch (fives) {
+  case 5: case 10: case 15:
+     printf("Contains 1-3 fives.");
+     break;
+  default:
+     print("Contains 0 or more than 3 fives.");
+}
+
+The above switch statement will look at a given number called fives and test to see if it matches any of the first 3 cases. If it does, it will enter that one case block and print “Contains 1-3 fives.”
+
+Try to apply this trick to your switch statement to print out your suffixes based on the day variable.
+
+7.
+Let’s do another test to see if your switch statements are working.
+
+Again, to compile and execute your program in the Terminal window, save your code and enter the following two commands:
+
+gcc date.c
+./a.out
+
+Now type and enter a date as you did before. For consistency, we’ll use the same test as we did before.
+
+01/01/2021
+
+Did you print January 1st (or whatever custom month you chose)? If not, make sure your cases are all formatted correctly and aren’t missing any suffixes!
+
+Printing the year:
+8.
+We’re almost done! This part is the easiest since we don’t need to perform any formatting to the year itself. Whatever was entered will just be printed back out.
+
+Let’s make sure we format the print statement correctly here.
+
+Write a print statement that starts with a comma, followed by a space, then prints the year followed by a period. Lastly, we want to close this final print statement off with a \n.
+
+9.
+Congratulations, your program’s done! Run it one more time just like you did before, and make sure to try different dates to make sure it works like you expect it to!
