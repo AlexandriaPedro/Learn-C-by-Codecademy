@@ -1,0 +1,79 @@
+Learn C
+Anagram Finder
+In this project, we will write a program to determine whether two strings are anagrams or not.
+
+String y is an anagram of string x if y is a rearrangement of string x. This implies that y and x have the same letters with the same amount of each letter. Example: “code” and “deco” are anagrams!
+
+The constraints of this project are: Each string will contain only characters that are from the first four letters of the English alphabet (‘a’, ‘b’, ‘c’, ‘d’) and spaces. All letters are in lowercase.
+
+We will do this by creating two arrays of length four: one for each string that represents the count of each character. These arrays will serve as counters. In each array, the number at position zero corresponds to the count of the letter ‘a’, the number at position one will correspond to the count of the letter ’b’ and this pattern will continue for the remaining letters. We do not count the number of spaces. For example, “a bc d” would be an anagram of “ab cd”.
+
+We will then loop through both strings and update their respective counters.
+
+We will then compare the two counters to see if the two strings are anagrams and if they are, we will print “Anagram!”. If they are not, we will print “Not Anagram!”
+
+Let’s get started!!
+
+Tasks
+10/10 complete
+Mark the tasks as complete by checking them off
+Setting everything up.
+1.
+Copy and paste the following starting code into your workspace:
+
+#include<stdio.h>
+#include<string.h>
+int main() {
+
+}
+
+2.
+Create two integer arrays called counter1 and counter2. Initialize both arrays with four zeros each.
+
+3.
+We will check if the following two strings are anagrams:
+
+String 1: “dbb cccccaacb cdbababdcdcdab dcdad”
+String 2: “bbbcc bdddccccad cdbbaaacaccdabdd”
+Right under your counters, create two char arrays called s1 and s2 containing String 1 and String 2 respectively.
+
+Counting the characters in String 1.
+4.
+First, create a for loop to loop through the string. Use strlen() to find the length of the string.
+
+5.
+We will now write the logic to determine the number of each character in String 1.
+
+We will update counter1 in the following way:
+
+If we encounter an ‘a’ we will increment counter1[0] by one.
+If we encounter a ‘b’ we will increment counter1[1] by one.
+If we encounter a ‘c’ we will increment counter1[2] by one.
+If we encounter a ‘d’ we will increment counter1[3] by one.
+If we encounter a space, we ignore it.
+Implement this logic in the loop body.
+
+Counting the characters in String 2.
+6.
+Loop through String 2 and update its counter (counter2) accordingly.
+
+Comparing the counts of both strings.
+7.
+We need a flag that we can use to determine if there is a mismatch in the two counters.
+
+First, create an integer variable called flag and set it to 0.
+
+The flag variable maintains one of these states:
+
+The flag will be set to zero if there is no mismatch in the counters.
+The flag will be set to one if there is a mismatch in the counters.
+8.
+Create an empty for loop that you will use to loop through both counters. We will place logic in it in the next task.
+
+9.
+In the loop, change the flag variable’s value to 1 if a mismatch is encountered.
+
+Well, are they anagrams?
+10.
+If the two strings are anagrams, print “Anagram!”. If they are not, print “Not Anagram!”
+
